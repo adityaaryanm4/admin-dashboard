@@ -14,11 +14,47 @@
         flex-direction: column;
         justify-content: space-between;
 
-        .title{
+        .title {
             font-weight: bold;
             font-size: 14px;
             color: rgb(160, 160, 160);
         }
+
+        .counter {
+            font-size: 28px;
+            font-weight: 300;
+        }
+
+        .link {
+            font-size: 14px;
+            border-bottom: 0.5px solid rgb(160, 160, 160);
+            cursor: pointer;
+        }
+
+        .percentage {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+
+            &.positive {
+                color: green;
+            }
+
+            &.negative {
+                color: green;
+            }
+        }
+
+        .icon-span {
+            align-self: flex-end;
+
+            .icon {
+                font-size: 18px;
+                border-radius: 5px;
+                padding: 3px 5px;
+            }
+        }
+
     }
 
 }
