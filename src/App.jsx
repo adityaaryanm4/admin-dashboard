@@ -3,6 +3,7 @@ import Home from './pages/home/Home'
 import List from './pages/list/List'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Single from './pages/single/Single'
+import New from './pages/new/New'
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="users" >
             <Route index element={<List />} />
+            <Route path="new" element={<New />} />
             <Route path=":userId" element={<Single />} />
           </Route>
         </Route>

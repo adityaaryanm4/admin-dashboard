@@ -21,13 +21,13 @@ const Home = () => {
         </div>
         <div className="charts">
           <FeaturedChart />
-          <SimpleChart />
+          <SimpleChart aspect={2/1} title="Revenue (Last 6 months)"/>
         </div>
         <div className="listContainer">
-          <div className="list">
+          
             <div className="listTitle">Latest Transactions</div>
             <ListContent />
-          </div>
+          
         </div>
       </div>
     </div>
