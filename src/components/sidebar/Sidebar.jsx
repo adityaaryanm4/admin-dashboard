@@ -31,7 +31,9 @@ const Sidebar = () => {
           <Link to="/users">
             <li><PersonIcon className='icon' /><span>Users</span></li>
           </Link>
-          <li><StoreMallDirectoryIcon className='icon' /><span>Products</span></li>
+          <Link to="/products">
+            <li><StoreMallDirectoryIcon className='icon' /><span>Products</span></li>
+          </Link>
           <li><CreditCardIcon className='icon' /><span>Orders</span></li>
           <li><LocalShippingIcon className='icon' /><span>Delivery</span></li>
           <p className="title">USEFUL</p>

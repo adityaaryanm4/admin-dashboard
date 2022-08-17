@@ -20,6 +20,7 @@
 
             .left {
                 flex: 1;
+                text-align: center;
 
                 .avatar {
                     width: 100px;
@@ -29,31 +30,48 @@
             }
 
             .right {
-                flex: 2;
+                flex: 3;
 
-                .form-input {
+                form {
                     display: flex;
-                    flex-direction: column;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    gap: 30px;
 
-                    .label-file {
+                    .form-input {
+                        width: 40%;
                         display: flex;
-                        align-items: center;
-                        gap: 10px;
+                        flex-direction: column;
+                        .label-file {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
 
-                        .drive-icon {
-                            cursor: pointer;
+                            .drive-icon {
+                                cursor: pointer;
+                            }
+                        }
+
+                        input {
+                            border: none;
+                            border-bottom: 1px solid gray;
+                            outline: none;
+                            padding: 5px;
+                            width: 80%;
+                        }
+
+                        &.file-input {
+                            margin-bottom: 20px;
                         }
                     }
-
-                    input {
+                    button{
+                        padding: 10px 40px;
+                        background-color: teal;
                         border: none;
-                        border-bottom: 1px solid gray;
-                        outline: none;
-                        padding: 5px;
-                        width: 100%;
-                    }
-                    &.file-input{
-                        margin-bottom: 20px;
+                        color: white;
+                        font-weight: bold;
+                        cursor: pointer;
+                        margin-top: 10px;
                     }
                 }
             }

@@ -3,14 +3,26 @@ import Navbar from '../../components/navbar/Navbar'
 import Sidebar from '../../components/sidebar/Sidebar'
 import DriveFolderUploadIcon from '@mui/icons-material/DriveFolderUpload';
 
-const New = () => {
+const FormInput = ({ newType }) => {
+    return (
+
+        <div className="form-input">
+            <label>{newType.label}</label>
+            <input type={newType.type} placeholder={newType.placeholder} />
+        </div>
+
+    )
+}
+
+const New = ({newType,title}) => {
+    
     return (
         <div className="new">
             <Sidebar />
             <div className="new-container">
                 <Navbar />
                 <div className="add-new">
-                    <div className="top"><h1 className="title">Add New User</h1></div>
+                    <div className="top"><h1 className="title">{title}</h1></div>
                     <div className="bottom">
                         <div className="left">
                             <div>
@@ -21,14 +33,15 @@ const New = () => {
                             <form action="">
 
                                 <div className="form-input file-input">
-                                    <label className="label-file" htmlFor="file"><span>Image:</span> <DriveFolderUploadIcon className="drive-icon"/></label>
-                                    <input type="file" id="file" style={{display:"none"}}/>
+                                    <label className="label-file" htmlFor="file"><span>Image:</span> <DriveFolderUploadIcon className="drive-icon" /></label>
+                                    <input type="file" id="file" style={{ display: "none" }} />
                                 </div>
 
-                                <div className="form-input">
-                                    <label>Fullname</label>
-                                    <input type="text" placeholder="John Doe"/>
-                                </div>
+                                {newType.map(newType => {
+                                    return <FormInput key={newType.id} newType={newType} />
+                                })}
+
+                                <button>Send</button>
                             </form>
                         </div>
                     </div>
