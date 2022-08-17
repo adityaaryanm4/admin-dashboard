@@ -14,9 +14,11 @@
                 object-fit: cover;
             }
         }
+
         .status {
             padding: 10px;
             border-radius: 5px;
+
             &.Pending {
                 color: goldenrod;
                 background-color: rgba(189, 189, 3, 0.103);

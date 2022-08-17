@@ -1,7 +1,7 @@
 import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/home/Home'
 import List from './pages/list/List'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Single from './pages/single/Single'
 import New from './pages/new/New'
 import { newProducts, newUsers } from './formSource'
@@ -10,7 +10,7 @@ import { useSelector } from "react-redux"
 
 const App = () => {
 
-  const {darkMode} = useSelector(state=>state.mode)
+  const { darkMode } = useSelector(state => state.mode)
 
   return (
 

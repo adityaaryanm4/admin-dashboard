@@ -40,11 +40,11 @@ const Single = () => {
                         </div>
                     </div>
                     <div className="right">
-                        <SimpleChart aspect={3/1} title="user spending (Last 6 months)"/>
+                        <SimpleChart aspect={3 / 1} title="user spending (Last 6 months)" />
                     </div>
                 </div>
                 <div className="bottom">
-        <ListContent />
+                    <ListContent />
                 </div>
 
             </div>

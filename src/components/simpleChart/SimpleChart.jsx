@@ -10,7 +10,7 @@ const data = [
   { name: "June", Total: 1700 },
 ];
 
-const SimpleChart = ({aspect,title}) => {
+const SimpleChart = ({ aspect, title }) => {
   return (
     <div className='simpleChart'>
       <div className="title">{title}</div>
@@ -29,14 +29,14 @@ const SimpleChart = ({aspect,title}) => {
 
           </defs>
 
-          <XAxis dataKey="name" stroke="gray"/>
+          <XAxis dataKey="name" stroke="gray" />
 
-          <CartesianGrid strokeDasharray="3 3" className="grid-stroke"/>
+          <CartesianGrid strokeDasharray="3 3" className="grid-stroke" />
 
           <Tooltip />
-          
+
           {/* main imp is this area */}
-          <Area dataKey="Total" type="monotone"  stroke="#8884d8" fillOpacity={1} fill="url(#color)" /> 
+          <Area dataKey="Total" type="monotone" stroke="#8884d8" fillOpacity={1} fill="url(#color)" />
 
         </AreaChart>
 

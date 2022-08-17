@@ -18,7 +18,7 @@ const FormInput = ({ newType }) => {
 const New = ({ newType, title }) => {
 
     const [file, setFile] = useState()
-    
+
     const handleFileChange = (event) => {
         const selectedFile = event.target.files[0]
         setFile(selectedFile)

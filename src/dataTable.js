@@ -11,15 +11,16 @@ export const userColumns = [
         }
     },
     { field: "email", headerName: "Email", width: 230 }, //field name must be exact as mentioned in row data
-    {field:"status",headerName:"Status",width:160,
-    renderCell:(params)=>{
-        return(
-            <div >
-                <span className={`cellStatus ${params.row.status}`}>{params.row.status}</span>
-            </div>
-        )
+    {
+        field: "status", headerName: "Status", width: 160,
+        renderCell: (params) => {
+            return (
+                <div >
+                    <span className={`cellStatus ${params.row.status}`}>{params.row.status}</span>
+                </div>
+            )
+        }
     }
-}
 
 ]
 

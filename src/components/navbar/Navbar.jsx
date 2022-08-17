@@ -1,4 +1,3 @@
-import React from 'react'
 import "./navbar.scss"
 import SearchIcon from '@mui/icons-material/Search';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -13,7 +12,7 @@ import { useDispatch } from 'react-redux';
 const Navbar = () => {
 
     const dispatch = useDispatch()
-    
+
     const handleToggle = () => {
         dispatch(darkModeToggle())
     }
@@ -33,7 +32,7 @@ const Navbar = () => {
                     <div className="item"><ChatBubbleOutlineIcon className='icon' /><span className="counter">2</span></div>
                     <div className="item"><ListIcon className='icon' /></div>
                     <div className="item">
-                        <img className="avatar" src="https://infinite-shore-80914.herokuapp.com/images/cat-modified.png" alt="cat-modified" />
+                        <img className="avatar" src="https://i.postimg.cc/sX0VCCKj/898f9bdfaaad17e37c47859af94ef306-modified-1.png" alt="cat-modified" />
                     </div>
                 </div>
             </div>

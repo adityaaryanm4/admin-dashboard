@@ -60,8 +60,11 @@
     .dataTable {
         .dataGrid {
             color: #999;
-            border:none;
-            .view-button,.del-button,.cellStatus{
+            border: none;
+
+            .view-button,
+            .del-button,
+            .cellStatus {
                 color: gray;
                 border: none;
             }
