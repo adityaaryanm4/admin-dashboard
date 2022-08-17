@@ -31,7 +31,7 @@ const SimpleChart = ({aspect,title}) => {
 
           <XAxis dataKey="name" stroke="gray"/>
 
-          <CartesianGrid strokeDasharray="3 3" stroke="lightgray"/>
+          <CartesianGrid strokeDasharray="3 3" className="grid-stroke"/>
 
           <Tooltip />
           

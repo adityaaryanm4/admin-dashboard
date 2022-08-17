@@ -85,9 +85,7 @@ const ListContent = () => {
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.id}>
-              <TableCell component="th" scope="row">
-                {row.id}
-              </TableCell>
+              <TableCell className="tableCell">{row.id} </TableCell>
               <TableCell className="tableCell">
                 <div className="product-cell">
                   <img className="image" src={row.img} alt="product_img" />
@@ -100,7 +98,7 @@ const ListContent = () => {
               <TableCell className="tableCell">
                 <span className={`status ${row.status}`}>
                   {row.status}</span>
-                  </TableCell>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

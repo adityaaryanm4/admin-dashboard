@@ -13,8 +13,20 @@ import SettingsSystemDaydreamOutlinedIcon from '@mui/icons-material/SettingsSyst
 import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
+import { useDispatch } from 'react-redux';
+import { darkModeOff, darkModeOn } from '../../darkMode/darkModeSlice';
 
 const Sidebar = () => {
+
+  const dispatch = useDispatch()
+
+  const handleOn = () => {
+    dispatch(darkModeOn())
+  }
+  const handleOff = () => {
+    dispatch(darkModeOff())
+  }
+
   return (
     <div className='sidebar'>
       <div className="top">
@@ -50,8 +62,8 @@ const Sidebar = () => {
         </ul>
       </div>
       <div className="bottom">
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
+        <div className="colorOption" onClick={handleOff}></div>
+        <div className="colorOption" onClick={handleOn}></div>
       </div>
     </div>
   )

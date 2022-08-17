@@ -1,8 +1,22 @@
 .dataTable {
     padding: 10px;
-    height: 600px;
-    a{
+    height: 100vh;
+
+    a {
         text-decoration: none;
+    }
+
+    .add-btn-outer {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        .add-new-btn {
+            padding: 6px;
+            border: 1px solid green;
+            border-radius: 5px;
+            color: green;
+            margin: 10px 0 ;
+        }
     }
 
     .cellWithImg {
@@ -51,6 +65,7 @@
             cursor: pointer;
             margin-right: 10px;
         }
+
         .del-button {
             padding: 2px 5px;
             border-radius: 5px;

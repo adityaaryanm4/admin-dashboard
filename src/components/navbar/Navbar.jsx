@@ -7,8 +7,17 @@ import FullscreenExitOutlinedIcon from '@mui/icons-material/FullscreenExitOutlin
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import ListIcon from '@mui/icons-material/List';
+import { darkModeToggle } from '../../darkMode/darkModeSlice';
+import { useDispatch } from 'react-redux';
 
 const Navbar = () => {
+
+    const dispatch = useDispatch()
+    
+    const handleToggle = () => {
+        dispatch(darkModeToggle())
+    }
+
     return (
         <div className="navbar">
             <div className="wrapper">
@@ -18,7 +27,7 @@ const Navbar = () => {
                 </div>
                 <div className="items">
                     <div className="item"><LanguageIcon className='icon' /><span>English</span></div>
-                    <div className="item"><DarkModeOutlinedIcon className='icon' /></div>
+                    <div className="item"><DarkModeOutlinedIcon className='icon' onClick={handleToggle} /></div>
                     <div className="item"><FullscreenExitOutlinedIcon className='icon' /></div>
                     <div className="item"><NotificationsNoneIcon className='icon' /><span className="counter">1</span></div>
                     <div className="item"><ChatBubbleOutlineIcon className='icon' /><span className="counter">2</span></div>
